@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+     <div id="imagem-fundo">
+         <header> <!-- Inicio do cabeçalho-->
+            <img src="imagens/logo.png" alt="imagem da logo do topo do site"> <!-- Imagem da logo-->
+            <nav> <!-- Inicio do menu de navegação-->
+                <ul>
+                    <li id="home" ><a href="">Inicio |</a></li>
+                    <li><a href="#segunda-sessao">Sobre | </a></li>
+                    <li><a href="#terceira-sessao">Portfólio |</a></li>
+                    <li><a href="#quarta-sessao">Contatos</a></li>
+                </ul>
+            </nav> <!-- Fim do menu de navegação-->
+         </header> <!-- Fim do cabeçalho-->
+         
+             <main> <!--Inicio do corpo-->
+            <div id="pra-cima"><a href="#home"><img src="imagens/icons8-divisa-circulada-acima-50.png" alt="Imagem indicando pra cima"></a></div>
+            <section id="primeira-sessao"> <!--Inicio primeira section-->
+                <div class="texto">
+                    <h1>Olá, eu sou <div class="fonte-wellison">Wellison Mendes</div>Estudante na área<br> de front-end</h1>
+                  <span class="icones">
+                    <a href="https://github.com/wellmendes25" target="_blank"><img src="imagens/github.png" alt=""></a>
+                    <a href="https://wa.me/558592778396" target="_blank"><img src="imagens/whatsapp (1).png" alt="Icone de whatsapp criado por Freepik - Flaticon" ></a>
+                    <a href="https://www.linkedin.com/in/wellison-mendes-422013140/" target="_blank"><img src="imagens/linkedin (2).png" alt="">
+                  </span></a>
+                </div>
+                <div id="imagem-main"><img src="imagens/img perfil.png" alt="" >
+         
+                </div>
+            </section> <!--Fim primeira section-->
+     
+
+        <section id="segunda-sessao"><!--Inicio segunda section-->
+
+            <div class="imagem1" >
+                <img src="imagens/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg" alt="Foto de Nubelson Fernandes na Unsplash">
+            </div>
+
+           
+            <div class="texto-segunda-sessao">
+
+                <h1>Sobre mim</h1>
+
+                <p>Sentir a rotina diária perder o brilho me levou ao mundo do <span class="destaque">desenvolvimento front-end.</span> A paixão por criar experiências digitais superou todos os medos. Cada linha de código era uma vitória, transformando ideias em realidades. Os desafios foram muitos, <span class="destaque">mas a comunidade de desenvolvedores sempre ajudou.</span> Essa transição não foi apenas uma mudança de carreira, mas um renascimento pessoal, onde <span class="destaque">encontrei propósito e paixão em cada projeto.</span></p>
+            </div>
+
+           
+
+        </section> <!--Fim da segunda section-->
+
+    </div>
+
+        <!-- <section id="terceira-sessao">
+            <h1>Meus projetos</h1>
+
+            <div id="pai">
+                <div class="filho-1">
+                    <video src="videos/paraty.mp4" loop autoplay></video>
+                </div>
+                <div class="filho-2"></div>
+                <div class="filho-3"></div>
+            </div> -->
+
+        </section>
+    </main> <!--Fim do corpo-->
+
+    <section id="quarta-sessao">
+        <div class="imagem2">
+            <img src="imagens/imagem2.jpg" alt="">
+        </div>
+
+        <div class="container-contatos">
+            <h1>ENTRAR EM CONTATO</h1>
+            <div class="contatos-box">
+                <form action="http://localhost:3000/send-message" method="POST">
+                    <div class="input-nome"><input type="text" id="nome" name="nome" placeholder="Nome:" required></div>
+                    <div class="input-telefone"><textarea name="Mensagem" id="Mensagem" placeholder="Mensagem: "></textarea></div>
+                    <div class="input-button-enviar"><input type="button"  onclick="sendWhatsAppMessage()" value="Enviar" required></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer> <!--Inicio do rodapé-->
+    <p>Copyright 2024  &copy;- &trade; Site de Wellison mendes. Icons by<a href="https://www.flaticon.com/br/" target="_blank">Flaticon</a></p>
+    </footer> <!--Fim do rodapé-->
+
+    <!-- <a href="https://www.flaticon.com/br/icones-gratis/whatsapp" title="whatsapp ícones">Whatsapp ícones criados por Freepik - Flaticon</a> -->
+
+
+    <script>
+        function sendWhatsAppMessage() {
+            const nome = document.getElementById('nome').value;
+            const Mensagem = document.getElementById('Mensagem').value;
+            
+            const message = `Nome: ${nome}\nMensagem: ${Mensagem}`;
+            const phoneNumber = '5585992778396';
+
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
