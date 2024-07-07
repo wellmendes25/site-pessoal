@@ -725,7 +725,10 @@ footer > p > a{
     input{
        width: 320px;
     }
-
+    
+    #Mensagem{
+        width: 320px;
+    }
 
     main #pra-cima{
         position: fixed;
