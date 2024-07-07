@@ -80,10 +80,20 @@
         <div class="container-contatos">
             <h1>ENTRAR EM CONTATO</h1>
             <div class="contatos-box">
-                <form action="http://localhost:3000/send-message" method="POST">
-                    <div class="input-nome"><input type="text" id="nome" name="nome" placeholder="Nome:" required></div>
-                    <div class="input-telefone"><textarea name="Mensagem" id="Mensagem" placeholder="Mensagem: "></textarea></div>
-                    <div class="input-button-enviar"><input type="button"  onclick="sendWhatsAppMessage()" value="Enviar" required></div>
+                <form action="https://formsubmit.co/wellyson.wm@gmail.com" method="POST">
+                   <input type="text" id="nome" name="nome" placeholder="Nome:" required>
+
+                    <input type="email" id="email" name="email" placeholder="Email:">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucesso.html">
+                    <input type="hidden" name="_autoresponse" value="Recebemos seu email, responderemos assim que possível">
+                    <input type="hidden" name="_captcha" value="false">
+                    <textarea name="message" id="Mensagem" placeholder="Digite sua mensagem: "></textarea>
+
+                   <button type="submit">Enviar</button>
+
+                   <input type="hidden" name="_subject" value="Novo Contato">
+                   <input type="text" name="_honey" style="display: none;">
+                
                 </form>
             </div>
         </div>
@@ -95,19 +105,6 @@
     <!-- <a href="https://www.flaticon.com/br/icones-gratis/whatsapp" title="whatsapp ícones">Whatsapp ícones criados por Freepik - Flaticon</a> -->
 
 
-    <script>
-        function sendWhatsAppMessage() {
-            const nome = document.getElementById('nome').value;
-            const Mensagem = document.getElementById('Mensagem').value;
-            
-            const message = `Nome: ${nome}\nMensagem: ${Mensagem}`;
-            const phoneNumber = '5585992778396';
-
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-
+    
 </body>
 </html>

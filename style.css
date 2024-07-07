@@ -334,7 +334,7 @@ input{
 
 #Mensagem{
     width: 400px;
-    height: 120px;
+    height: 80px;
     border: 1px solid;
     font-size: 20px;
     padding-left: 3px;
@@ -347,19 +347,19 @@ input{
     padding-left: 3px;
 }
 
-#quarta-sessao input[type="text"]{
+#quarta-sessao input[type="text"], #email{
    font-size: 18px;
    padding-left: 3px;
 }
 
-#quarta-sessao input[type="button"] {
+#quarta-sessao button[type="submit"] {
     width: 70px;
     margin-top: 5px;
     cursor: pointer;
     background-color: #64B7E7;
 }
 
-#quarta-sessao input[type="button"]:hover{
+#quarta-sessao button[type="submit"]:hover{
     background-color: #00457F;
     color: white;
     transition: 1.3s;
